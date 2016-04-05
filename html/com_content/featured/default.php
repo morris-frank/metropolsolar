@@ -31,10 +31,10 @@ $path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 
 		<section class="logo-map-sec backcolor">
 			<div class="logo-map">
-				<img src="<?php echo $path; ?>/media/metro-logo.svg" />
+				<img class="shadow" src="<?php echo $path; ?>/media/metro-logo.svg" />
 				<a href=""><button class="nw backcolor-shine">MPS Energie Institut</button></a>
-				<a href=""><button class="ne backcolor-shine">Bildung</button></a>
-				<a href=""><button class="sw backcolor-shine"></button></a>
+				<a href=""><button class="ne backcolor-shine">Verein</button></a>
+				<a href=""><button class="sw backcolor-shine">Bildung</button></a>
 				<a href=""><button class="se backcolor-shine">Mitglied werden</button></a>
 			</div>
 		</section>
@@ -124,7 +124,7 @@ $path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 
 		<div class="cols">
 		<section class="col-2 left">
-			<h2>Institut 1</h2>
+			<h2>Institut</h2>
 			<div class="item">
 				<p>MetropolSolar wurde als gemeinnütziger Verein gegründet, um eine Vollversorgung mit erneuerbaren Energien voranzutreiben. Neben internen Vernetzungsaktivitäten, fachlichem Austausch, Aufbau von Umsetzungsstrukturen, Organisation von Veranstaltungen und Öffentlichkeitsarbeit, spielt die Beratung nach außen eine immer größere Rolle.
 
@@ -137,7 +137,7 @@ Wenn Sie wissen wollen, ob und wie wir Sie bei der Entwicklung Ihrer Ideen und k
 		</section>
 
 		<section class="col-2 right">
-			<h2>Verein 2</h2>
+			<h2>Verein</h2>
 			<div class="item">
 				<p>Das 2006 gegründete Netzwerk MetropolSolar Rhein-Neckar fördert die vollständige Ablösung der atomarfossilen Energieversorgung durch Energieeffizienz, Energieeinsparung und den Ausbau der Nutzung aller erneuerbaren Energien.</p>
 			</div>

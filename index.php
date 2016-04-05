@@ -18,7 +18,7 @@ $this->direction = $doc->direction;
 //Remove jquery shit
 $headData = $doc->getHeadData();
 $scripts = $headData['scripts'];
-unset($scripts[JUri::root(true) . '/media/jui/js/jquery.min.js']);
+//unset($scripts[JUri::root(true) . '/media/jui/js/jquery.min.js']);
 unset($scripts[JUri::root(true) . '/media/jui/js/jquery-noconflict.js']);
 unset($scripts[JUri::root(true) . '/media/jui/js/jquery-migrate.min.js']);
 $headData['scripts'] = $scripts;
@@ -104,7 +104,7 @@ else
 	<?php // Template color ?>
 	<?php if ($this->params->get('templateBackgroundColor')) : ?>
 	<style type="text/css">
-		body.site
+		body.view-featured
 		{
 			background-color: <?php echo $this->params->get('templateBackgroundColor'); ?>
 		}
@@ -173,24 +173,43 @@ else
       			<img src="<?php echo $path; ?>/media/metro-logo.svg" />
       			<span>MetropolSolar</span><span>Rhein-Neckar</span>
     		</h1></a>
-    		<jdoc:include type="module" name="main-menu" title="Main Menu" />
+    		<div class="mod-main-menu">
+    			<jdoc:include type="modules" name="main-menu" title="Main Menu" />
+    		</div>
   	</header>
 
-	<div class="header-search pull-right">
-		<jdoc:include type="modules" name="position-1" style="none" />
-	</div>
 
+  	<div id="main-wrapper">
 	<main id="content" role="main" class="<?php echo $span; ?>">
 		<!-- Begin Content -->
 		<jdoc:include type="message" />
 		<jdoc:include type="component" />
-		<jdoc:include type="modules" name="pre-footer" style="none" />
+
+		<?php if($view != 'featured'): ?>
+		<div class="mod-pre-footer">
+			<jdoc:include type="modules" name="pre-footer" style="none" />
+		</div>
+		<?php endif; ?>
 		<!-- End Content -->
 	</main>
 
+
+	<?php if($view != 'featured'): ?>
+	<div class="sidebar">
+		<div class="mod-search">
+			<jdoc:include type="modules" name="search" style="none" />
+		</div>
+		<div class="mod-sidebar">
+			<jdoc:include type="modules" name="sidebar" style="none" />
+		</div>
+	</div>
+	<?php endif; ?>
+
+	</div>
+
 	<footer>
   		<a class="site-logo" href="/">
-      			<img src="<?php echo $path; ?>/media/metro-logo.svg" />
+      			<img class="shadow" src="<?php echo $path; ?>/media/metro-logo.svg" />
       			<h1>MetropolSolar</h1>
       			<h2>Rhein-Neckar</h2>
     		</a>
@@ -199,41 +218,43 @@ else
     			<div class="leftest">
     				<h3>Menu 1</h3>
     				<ul>
-    					<li>Ptr1</li>
-    					<li>Ptr1 + Ptr2</li>
+    					<li><a href="">Ptr1</a></li>
+    					<li><a href="">Ptr1 + Ptr2</a></li>
     				</ul>
     			</div>
     			<div class="left">
     				<h3>Menu 2</h3>
     				<ul>
-    					<li>Ptr1</li>
-    					<li>Ptr1 + Ptr2</li>
-    					<li>Ptr2</li>
-    					<li>Ptr23</li>
+    					<li><a href="">Ptr1</a></li>
+    					<li><a href="">Ptr1 + Ptr2</a></li>
+    					<li><a href="">Ptr2</a></li>
+    					<li><a href="">Ptr23</a></li>
     				</ul>
     			</div>
     			<div class="right">
     				<h3>Menu 3</h3>
     				<ul>
-    					<li>Ptr1</li>
-    					<li>Ptr1 + Ptr2</li>
-    					<li>Ptr1 + Ptr2</li>
-    					<li>Ptr2</li>
-    					<li>Ptr2</li>
-    					<li>Ptr23</li>
+    					<li><a href="">Ptr1</a></li>
+    					<li><a href="">Ptr1 + Ptr2</a></li>
+    					<li><a href="">Ptr1 + Ptr2</a></li>
+    					<li><a href="">Ptr2</a></li>
+    					<li><a href="">Ptr2</a></li>
+    					<li><a href="">Ptr23</a></li>
     				</ul>
     			</div>
     			<div class="rightest">
     				<h3>Menu 4</h3>
     				<ul>
-    					<li>Ptr1</li>
-    					<li>Ptr2</li>
-    					<li>Ptr23</li>
+    					<li><a href="">Ptr1</a></li>
+    					<li><a href="">Ptr2</a></li>
+    					<li><a href="">Ptr23</a></li>
     				</ul>
     			</div>
     		</div>
 
-   		<jdoc:include type="modules" name="footer" />
+    		<div class="mod-footer">
+    			<jdoc:include type="modules" name="footer" />
+    		</div>
    	</footer>
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>
