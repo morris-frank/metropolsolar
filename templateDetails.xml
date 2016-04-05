@@ -27,8 +27,8 @@
 	<positions>
 		<position>main-menu</position>
 		<position>debug</position>
-		<position>position-1</position>
-		<position>position-2</position>
+		<position>search</position>
+		<position>sidebar</position>
 		<position>position-3</position>
 		<position>pre-footer</position>
 		<position>footer</position>
