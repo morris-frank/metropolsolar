@@ -26,13 +26,12 @@ a:hover .shadow {
 a {
 	text-decoration: none;
 	color: inherit;
-	transition: 0.3s;
+	transition: 0.1s;
 	font-style: italic;
 }
 
-li a {
+.menu a {
 	font-style: normal;
-}
 }
 
 a:hover {
@@ -40,8 +39,11 @@ a:hover {
 }
 
 body {
-	font: 300 16px/1.4 'Titillium Web', "Helvetica","Arial",sans-serif;
+	font: 300 16px/1.4 'Titillium Web', 'Helvetica',sans-serif;
 	padding-top: 80px;
+	background-attachment: fixed;
+	background-color: #E4EBEC;
+	background: linear-gradient(rgba(234,247,249,1), rgba(228, 235, 236, 1));
 }
 
 h1,
@@ -111,17 +113,21 @@ button a:hover {
 	color: inherit;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
 body ::-webkit-scrollbar {
 	width: 8px;
 }
 
-body ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background-color: white;
 }
 
-body ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	box-shadow:  inset -1px 1px 2px rgba(0,0,0,0.1);
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.2);
 }
 
 /******************/
@@ -135,9 +141,10 @@ header {
 	position: fixed;
 	top: 0;
 	box-sizing: border-box;
+	box-shadow: 0 0 8px -3px rgba(0,0,0,0.3);
+	overflow: hidden;
+	min-width: 685px;
 	z-index: 15;
-	min-width: 250px;
-	box-shadow: 0 0 6px rgba(0,0,0,0.3);
 }
 
 .site-logo {
@@ -149,7 +156,6 @@ header > * {
 	position: relative;
 	float: left;
 	font-size: 15px;
-	font-weight: bold;
 	color: #333;
 }
 
@@ -235,6 +241,22 @@ header .site-logo span + span {
 	left: -5px;
 }
 
+@media (max-width: 800px ) {
+	header .site-logo {
+		transform: scale(0.7);
+		margin-left: -39px;
+	}
+
+	header > * {
+		font-size: 13px;
+	}
+
+	.mod-main-menu {
+		padding-top: 16px;
+		margin-left: -35px;
+	}
+}
+
 #main-wrapper {
 	min-width: 685px;
 	max-width: 950px;
@@ -245,11 +267,13 @@ main {
 	float: left;
 	width: 75%;
 	height: 100%;
+	margin-bottom: 30px;
 }
 
-main h2 {
-	color: #252525;
-	padding: 5px 0px;
+main > * > h2 {
+	color: white;
+	padding: 1px 14px;
+	background-color: #f5e611;
 }
 
 .view-featured main h2 {
@@ -266,8 +290,8 @@ main h2 {
 
 .actions {
 	list-style: none;
-	margin: 7px 0;
-	background: #F5E611;
+	margin: 7px 0 30px;
+	background: #E0E0E0;
 	padding: 5px 2px 0;
 }
 
@@ -279,16 +303,18 @@ main h2 {
 .sidebar,
 article,
 div.category-list,
-.breadcrumb{
-	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+.breadcrumb,
+div.blog {
+	box-shadow: 0 1px 8px -3px rgba(0,0,0,0.2);
+	/*box-shadow: 3px 4px 0 0 rgba(0,0,0,0.2);*/
 	background-color: white;
 	box-sizing: border-box;
 	position: relative;
-	background-color: #f2f2f2;
 }
 
 article,
-div.category-list{
+div.category-list,
+div.blog {
 	min-height: 400px;
 	min-height: 40vh;
 	width: 95%;
@@ -303,7 +329,8 @@ div.category-list{
 }
 
 .mod-pre-footer {
-	margin-top: 30px;
+	clear: both;
+	padding-right: 40px;
 }
 
 .breadcrumb {
@@ -347,18 +374,32 @@ div.category-list{
 }
 
 footer {
-	z-index: 16;
 	position: relative;
 	height: 475px;
 	height: 95vh;
 	background-color: white;
-	box-shadow: 0 -4px 30px rgba(0,0,0,0.2);
+	box-shadow: 0 -10px 30px -10px rgba(0,0,0,0.2);
 	margin-top: 50px;
 	padding-top: 25px;
 	padding-top: 5vh;
 	color: #333;
 	clear: both;
-	overflow: hidden;
+	min-width: 685px;
+	z-index: 16;
+}
+
+.cloud-catcher {
+	content: '';
+	display: block;
+	position: relative;
+	top: 50px;
+	height: 139px;
+	margin-top: -67px;
+	width: 100%;
+	background-image: url('../media/bg-clouds.svg');
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	z-index: 16;
 }
 
 footer ul {
@@ -380,11 +421,15 @@ footer li a {
 
 
 footer li:hover {
-	border-left-width: 3px;
+	background-color: white;
+}
+
+footer li:hover a {
 }
 
 footer .site-logo {
 	display: block;
+	min-width: 300px;
 	width: 50vh;
 	text-align: center;
 	margin: 0 auto;
@@ -452,8 +497,10 @@ footer .mod-footer {
 /*ARTICLE VIEW*/
 /**************/
 body.site {
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0));
-	background-color: #e8e8e8;
+	background-attachment: fixed;
+	background-color: #E4EBEC;
+	background: linear-gradient(rgba(234,247,249,1), rgba(228, 235, 236, 1));
+	background: url('../media/bg-hills.svg') bottom center repeat-x, linear-gradient(rgba(234,247,249,1), rgba(228, 235, 236, 1));
 }
 
 .pager {

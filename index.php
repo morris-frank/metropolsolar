@@ -104,10 +104,6 @@ else
 	<?php // Template color ?>
 	<?php if ($this->params->get('templateBackgroundColor')) : ?>
 	<style type="text/css">
-		body.view-featured
-		{
-			background-color: <?php echo $this->params->get('templateBackgroundColor'); ?>
-		}
 		.backcolor
 		{
 			background-color: <?php echo $this->params->get('templateBackgroundColor'); ?>
@@ -184,13 +180,6 @@ else
 		<!-- Begin Content -->
 		<jdoc:include type="message" />
 		<jdoc:include type="component" />
-
-		<?php if($view != 'featured'): ?>
-		<div class="mod-pre-footer">
-			<jdoc:include type="modules" name="pre-footer" style="none" />
-		</div>
-		<?php endif; ?>
-		<!-- End Content -->
 	</main>
 
 
@@ -205,6 +194,15 @@ else
 	</div>
 	<?php endif; ?>
 
+	<?php if($view != 'featured'): ?>
+	<div class="mod-pre-footer">
+		<jdoc:include type="modules" name="pre-footer" style="none" />
+	</div>
+	<?php endif; ?>
+
+	</div>
+
+	<div class="cloud-catcher">
 	</div>
 
 	<footer>
