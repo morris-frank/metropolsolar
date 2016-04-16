@@ -174,33 +174,34 @@ else
     		</div>
   	</header>
 
+  	<?php if($view != 'featured'): ?>
+  	<div class="main-mask">
+  	<div class="main-wrapper">
+  	<?php endif; ?>
+		<main id="content" role="main" class="<?php echo $span; ?>">
+			<!-- Begin Content -->
+			<jdoc:include type="message" />
+			<jdoc:include type="component" />
 
-  	<div id="main-wrapper">
-	<main id="content" role="main" class="<?php echo $span; ?>">
-		<!-- Begin Content -->
-		<jdoc:include type="message" />
-		<jdoc:include type="component" />
-	</main>
+			<?php if($view != 'featured'): ?>
+			<div class="mod-pre-footer">
+				<jdoc:include type="modules" name="pre-footer" style="none" />
+			</div>
+			<?php endif; ?>
+		</main>
 
-
-	<?php if($view != 'featured'): ?>
-	<div class="sidebar">
-		<div class="mod-search">
-			<jdoc:include type="modules" name="search" style="none" />
-		</div>
-		<div class="mod-sidebar">
-			<jdoc:include type="modules" name="sidebar" style="none" />
-		</div>
+		<?php if($view != 'featured'): ?>
+		<nav class="sidebar">
+			<div class="mod-search">
+				<jdoc:include type="modules" name="search" style="none" />
+			</div>
+			<div class="mod-sidebar">
+				<jdoc:include type="modules" name="sidebar" style="none" />
+			</div>
+		</nav>
+	</div>
 	</div>
 	<?php endif; ?>
-
-	<?php if($view != 'featured'): ?>
-	<div class="mod-pre-footer">
-		<jdoc:include type="modules" name="pre-footer" style="none" />
-	</div>
-	<?php endif; ?>
-
-	</div>
 
 	<div class="cloud-catcher">
 	</div>
