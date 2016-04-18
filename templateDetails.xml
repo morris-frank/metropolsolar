@@ -22,7 +22,6 @@
 		<folder>img</folder>
 		<folder>js</folder>
 		<folder>language</folder>
-		<folder>less</folder>
 	</files>
 	<positions>
 		<position>main-menu</position>
