@@ -7,18 +7,21 @@
  */
 
 $( document ).ready(function() {
- var shrinkHeader = 100;
+  var  header = document.getElementsByTagName("header")[0];
+  var secHead = document.querySelector("section.head");
+  var shrinkHeader = 40;
   $(window).scroll(function() {
     var scroll = getCurrentScroll();
-        var  header = document.getElementsByTagName("header")[0];
-      if ( scroll >= shrinkHeader ) {
-       	header.className = "shrink";
-        }
-        else {
-        	header.className = "";
-        }
-  });
-function getCurrentScroll() {
-    return window.pageYOffset;
+    if ( scroll >= shrinkHeader ) {
+      header.className = "shrink";
+    } else {
+      header.className = "";
     }
+
+    var posY = -200 - (scroll/3)
+    secHead.style.backgroundPositionY = posY.toString() +"px";
+  });
+  function getCurrentScroll() {
+    return window.pageYOffset;
+  }
 });
