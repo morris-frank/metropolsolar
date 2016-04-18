@@ -115,12 +115,6 @@ else
 		.view-featured section > h2 {
 			color:  <?php echo $this->params->get('templateBackgroundColor'); ?>
 		}
-		.navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover,
-		.btn-primary
-		{
-			background:  #f5e611;
-			color: #fff;
-		}
 		.navbar-inner
 		{
 			-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
@@ -209,6 +203,7 @@ else
 	<footer>
   		<a class="site-logo" href="/">
       			<img class="shadow" src="<?php echo $path; ?>/media/metro-logo.svg" />
+
       			<h1>MetropolSolar</h1>
       			<h2>Rhein-Neckar</h2>
     		</a>
