@@ -21,7 +21,6 @@ $path   = JURI::base(true).'/templates/'.$app->getTemplate().'/';
 
 ?>
 
-<div>
 		<section class="head">
 			<h2>Wir bündeln Akteure</h2>
 			<div class="item">
@@ -150,4 +149,3 @@ Wenn Sie wissen wollen, ob und wie wir Sie bei der Entwicklung Ihrer Ideen und k
 				<p></p>
 			</div>
 		</section>
-</div>
