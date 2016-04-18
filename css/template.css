@@ -43,13 +43,13 @@ body {
 	color: #333;
 	padding-top: 80px;
 	background-attachment: fixed;
-	background-color: white;
+	background-color: #f7f7f7;
+	background: repeating-linear-gradient(115deg,rgba(155,155,155,.15),rgba(155,155,155,0) 3px,rgba(155,155,155,0) 3px,rgba(155,155,155,0) 5px);
 }
 
 h1,
-h2,
-h3,
-h4{
+h2
+{
 	margin-bottom: 0.2em;
 	transition: 0.3s;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
@@ -88,16 +88,18 @@ ol {
 }
 
 button {
-	background-color: #F5E611;
-	font-weight: bold;
-	padding: 2px 15px;
+	/*background-color: #F5E611;*/
+	background-color: #BCEB10;
+	padding: 4px 10px;
 	border-radius: 4px;
 	white-space: nowrap;
 	text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
 	transition: 0.3s;
-	font-size: 1.2em;
 	border: none;
 	cursor: pointer;
+	font: inherit;
+	font-weight: bold;
+	line-height: 1em;
 }
 
 button:hover {
@@ -114,15 +116,15 @@ button a:hover {
 }
 
 ::-moz-selection {
-	color: #000;
+	color: white;
 	background: #f5e611;
 	text-shadow: none;
 }
 
 ::selection {
-    	color: #000;
+    	color: white;
     	background: #f5e611;
-    	text-shadow: 1px 0px 0px #fff;
+    	text-shadow: none;
 }
 
 ::-webkit-scrollbar {
@@ -345,15 +347,38 @@ header .site-logo span + span {
 	}
 }
 
+article,
+div.category-list,
+.breadcrumb,
+div.blog,
+nav.sidebar .mod-search,
+nav.sidebar .mod-sidebar{
+	/*box-shadow: 0 1px 8px 2px rgba(0,0,0,0.8);*/
+	/*box-shadow: 3px 4px 0 0 rgba(0,0,0,0.2);*/
+	/*border: 1px solid #ccc;*/
+	background-color: white;
+	box-sizing: border-box;
+	position: relative;
+}
+
+article,
+div.category-list,
+div.blog {
+	min-height: 400px;
+	min-height: 40vh;
+	padding: 24px 60px;
+	margin-bottom: 40px;
+}
+
 main {
 	height: 100%;
 	margin-bottom: 30px;
 }
 
 main > * > h2 {
-	color: white;
+	color: #2b2b2b;
 	padding: 1px 14px;
-	background-color: #f5e611;
+	/*background-color: #f5e611;*/
 }
 
 .main-mask {
@@ -376,18 +401,17 @@ main > * > h2 {
 .main-mask nav {
 	float: left;
 	position: relative;
-	padding: 0 0 1em 0;
 }
 
 .main-mask main {
 	width: 71%;
 	left: 102%;
+	padding: 0 0 1em 0;
 }
 .main-mask nav {
 	width: 23%;
 	left: 6%;
 	overflow: hidden;
-	padding: 20px 10px;
 }
 
 .view-featured main h2 {
@@ -400,6 +424,7 @@ main > * > h2 {
 	float: none;
 	width: 100%;
 	height: auto;
+	padding-top: 60px;
 }
 
 .actions {
@@ -414,29 +439,13 @@ main > * > h2 {
 	margin: 0 5px;
 }
 
-.sidebar,
-article,
-div.category-list,
-.breadcrumb,
-div.blog {
-	/*box-shadow: 0 1px 8px 2px rgba(0,0,0,0.8);*/
-	/*box-shadow: 3px 4px 0 0 rgba(0,0,0,0.2);*/
-	border: 1px solid #ccc;
-	background-color: white;
-	box-sizing: border-box;
-	position: relative;
-}
-
-article,
-div.category-list,
-div.blog {
-	min-height: 400px;
-	min-height: 40vh;
-	padding: 24px 60px;
-	margin-bottom: 40px;
-}
-
 .sidebar {
+}
+
+nav.sidebar .mod-search,
+nav.sidebar .mod-sidebar {
+	padding: 20px 10px;
+	margin-bottom: 10px;
 }
 
 .sidebar h4,
@@ -535,22 +544,22 @@ footer ul {
 
 footer li {
 	margin-bottom: 10px;
-	padding-left: 7px;
-	border-left: 1px solid white;
 	transition: 0.3s;
 }
 
 footer li a {
 	position: relative;
 	left: 0;
+	font-style: normal;
+	color: #CECCBB;
 }
 
 
 footer li:hover {
-	background-color: white;
 }
 
 footer li:hover a {
+	color: white;
 }
 
 footer .site-logo {
@@ -593,7 +602,8 @@ footer .four-columns {
 }
 
 footer .four-columns > div h3 {
-	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
 footer .four-columns > div {
@@ -601,7 +611,7 @@ footer .four-columns > div {
 	background-color: #f5e611;
 	border: 0 solid #fff;
 	border-width: 0 20px;
-	padding: 5px 25px;
+	padding: 10px 25px;
 }
 
 @media(max-width:  850px) {
@@ -626,9 +636,11 @@ footer .mod-footer {
 /*ARTICLE VIEW*/
 /**************/
 body.site {
+	/*
 	background-image: url('../media/bg-hills.svg');
 	background-position: bottom center;
 	background-repeat: repeat-x;
+	*/
 }
 
 .pager {
@@ -713,7 +725,7 @@ body.site {
 	max-width: 1000px;
 	padding: 80px 30px;
 	overflow-y: auto;
-	max-height: boldpx;
+	max-height: 600px;
 	max-height: 70vh;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
@@ -759,9 +771,12 @@ body.site {
 }
 
 .view-featured .head {
-	background: #15EC30;
+	background: #A4D273;
 	background-repeat: no-repeat;
+	background-size: cover;
 	background-position: center;
+	background-position-X: 50%;
+	background-position-Y: -200px;
 	z-index: 5;
 	padding-top: 160px;
 	padding-bottom: 10px;
@@ -769,6 +784,8 @@ body.site {
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	text-align: center;
+	width: 100%;
+	max-width: initial;
 }
 
 .view-featured .head h2 {
@@ -799,7 +816,7 @@ body.site {
 }
 
 .view-featured .logo-map-sec {
-	background: transparent;
+	background: white;
 	height: 300px;
 	overflow: hidden;
 	box-shadow: none;
@@ -846,6 +863,20 @@ body.site {
 
 
 /* COPIED *********/
+.navbar-inner,
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover,
+.nav-pills > .active > a, .nav-pills > .active > a:hover,
+.btn-primary
+{
+	background:  #f5e611;
+	background: #BCEB10;
+	color: #fff;
+}
+
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -1053,14 +1084,38 @@ select:focus:invalid:focus {
 }
 
 input.search-query {
-	padding-right: 14px;
-	padding-right: 4px \9;
-	padding-left: 14px;
-	padding-left: 4px \9;
-	margin-bottom: 0;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	float: left;
+	height: 30px;
+	margin: 0;
+	min-height: 30px;
+	line-height: 19px;
+	-webkit-transition: width 150ms;
+	transition: width 150ms;
+}
+
+input.search-query:focus {
+	background-color: #f5e611;
+	box-shadow: none;
+	color: white;
+	padding-right: 54px;
+}
+
+input.search-query:focus::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color: white;
+}
+
+input.search-query:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: white;
+	opacity:  1;
+}
+
+input.search-query:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color: white;
+	opacity:  1;
+}
+
+input.search-query:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: white;
 }
 
 .form-search input,
