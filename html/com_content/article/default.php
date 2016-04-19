@@ -48,22 +48,11 @@ if ($params->get('show_title')) : ?>
 <?php if ($params->get('access-edit') ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 		<ul class="actions">
 		<?php if (!$this->print) : ?>
-				<?php if ($params->get('show_print_icon')) : ?>
-				<li class="print-icon">
-						<?php echo JHtml::_('icon.print_popup', $this->item, $params, array(), true); ?>
-				</li>
-				<?php endif; ?>
-
-				<?php if ($params->get('show_email_icon')) : ?>
-				<li class="email-icon">
-						<?php echo JHtml::_('icon.email', $this->item, $params, array(), true); ?>
-				</li>
-				<?php endif; ?>
 				<?php if ($this->user->authorise('core.edit', 'com_content.article.'.$this->item->id)) : ?>
 						<li class="edit-icon">
 							<?php echo JHtml::_('icon.edit', $this->item, $params, array(), true); ?>
 						</li>
-					<?php endif; ?>
+				<?php endif; ?>
 		<?php else : ?>
 				<li>
 						<?php echo JHtml::_('icon.print_screen', $this->item, $params, array(), true); ?>

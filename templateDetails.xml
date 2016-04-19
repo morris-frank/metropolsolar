@@ -31,6 +31,13 @@
 		<position>position-3</position>
 		<position>pre-footer</position>
 		<position>footer</position>
+
+
+		<position>front-red-left</position>
+		<position>front-red-right</position>
+		<position>front-yellow-left</position>
+		<position>front-yellow-right</position>
+		<position>front-blue</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_metropol.ini</language>
@@ -48,6 +55,55 @@
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					filter="string" />
 
+				<field name="sitedeschead"  type="text" default="Wir bündeln Akteure"
+					label="TPL_METROPOL_SITEDESCHEAD_LABEL"
+					description="TPL_METROPOL_SITEDESCHEAD_DESC"
+					filter="string" />
+
+				<field name="sitedescbody"  type="text" default="Das 2006 gegründete Netzwerk MetropolSolar Rhein-Neckar fördert die vollständige Ablösung der atomarfossilen Energieversorgung durch Energieeffizienz, Energieeinsparung und den Ausbau der Nutzung aller erneuerbaren Energie"
+					label="TPL_METROPOL_SITEDESCBODY_LABEL"
+					description="TPL_METROPOL_SITEDESCBODY_DESC"
+					filter="string" />
+
+				<field name="logomapheadnw"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPHEADNW_LABEL"
+					description="TPL_METROPOL_LOGOMAPHEADNW_DESC"
+					filter="string" />
+
+				<field name="logomapbodynw"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPBODYNW_LABEL"
+					description="TPL_METROPOL_LOGOMAPBODYNW_DESC"
+					filter="string" />
+
+				<field name="logomapheadne"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPHEADNE_LABEL"
+					description="TPL_METROPOL_LOGOMAPHEADNE_DESC"
+					filter="string" />
+
+				<field name="logomapbodyne"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPBODYNE_LABEL"
+					description="TPL_METROPOL_LOGOMAPBODYNE_DESC"
+					filter="string" />
+
+				<field name="logomapheadsw"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPHEADSW_LABEL"
+					description="TPL_METROPOL_LOGOMAPHEADSW_DESC"
+					filter="string" />
+
+				<field name="logomapbodysw"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPBODYSW_LABEL"
+					description="TPL_METROPOL_LOGOMAPBODYSW_DESC"
+					filter="string" />
+
+				<field name="logomapheadse"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPHEADSE_LABEL"
+					description="TPL_METROPOL_LOGOMAPHEADSE_DESC"
+					filter="string" />
+
+				<field name="logomapbodyse"  type="text" default=""
+					label="TPL_METROPOL_LOGOMAPBODYSE_LABEL"
+					description="TPL_METROPOL_LOGOMAPBODYSE_DESC"
+					filter="string" />
 			</fieldset>
 		</fields>
 	</config>
