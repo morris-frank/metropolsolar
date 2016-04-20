@@ -18,9 +18,10 @@ $this->direction = $doc->direction;
 //Remove jquery shit
 $headData = $doc->getHeadData();
 $scripts = $headData['scripts'];
-//unset($scripts[JUri::root(true) . '/media/jui/js/jquery.min.js']);
+unset($scripts[JUri::root(true) . '/media/jui/js/jquery.min.js']);
 unset($scripts[JUri::root(true) . '/media/jui/js/jquery-noconflict.js']);
 unset($scripts[JUri::root(true) . '/media/jui/js/jquery-migrate.min.js']);
+unset($scripts[JUri::root(true) . '/media/jui/js/bootstrap.min.js']);
 $headData['scripts'] = $scripts;
 $doc->setHeadData($headData);
 
@@ -147,7 +148,7 @@ else
   	<div class="main-mask">
   	<div class="main-wrapper">
   	<?php endif; ?>
-		<main id="content" role="main" class="<?php echo $span; ?>">
+		<main id="content" role="main">
 			<!-- Begin Content -->
 			<jdoc:include type="message" />
 			<jdoc:include type="component" />

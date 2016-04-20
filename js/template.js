@@ -6,22 +6,25 @@
  * @since       3.2
  */
 
-$( document ).ready(function() {
-  var  header = document.getElementsByTagName("header")[0];
-  var secHead = document.querySelector("section.head");
+function fnWrapper(e) {
+  var header          = document.querySelector('header');
+  var secHead        = document.querySelector("section.head");
   var shrinkHeader = 40;
-  $(window).scroll(function() {
-    var scroll = getCurrentScroll();
-    if ( scroll >= shrinkHeader ) {
+
+  function shrinkyScroll(e) {
+    if( window.pageYOffset > shrinkHeader ) {
       header.className = "shrink";
-    } else {
+    }else{
       header.className = "";
     }
-
-    var posY = -200 - (scroll/3)
-    secHead.style.backgroundPositionY = posY.toString() +"px";
-  });
-  function getCurrentScroll() {
-    return window.pageYOffset;
+    if(secHead != null) {
+      var posY = -200 - (window.pageYOffset/3)
+      secHead.style.backgroundPositionY = posY.toString() +"px";
+    }
   }
-});
+
+  window,addEventListener('scroll', shrinkyScroll, false);
+}
+
+
+document.addEventListener('DOMContentLoaded', fnWrapper, false);
