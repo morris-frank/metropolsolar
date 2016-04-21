@@ -193,7 +193,6 @@ else
     			</div>
     			<div class="right">
  	   			<jdoc:include type="modules" name="footer-column-3" />
-    				<h3>Menu 3</h3>
     			</div>
     			<div class="rightest">
  	   			<jdoc:include type="modules" name="footer-column-4" />
