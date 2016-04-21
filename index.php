@@ -186,39 +186,17 @@ else
 
     		<div class="four-columns">
     			<div class="leftest">
-    				<h3>Menu 1</h3>
-    				<ul>
-    					<li><a href="">Ptr1</a></li>
-    					<li><a href="">Ptr1 + Ptr2</a></li>
-    				</ul>
+ 	   			<jdoc:include type="modules" name="footer-column-1" />
     			</div>
     			<div class="left">
-    				<h3>Menu 2</h3>
-    				<ul>
-    					<li><a href="">Ptr1</a></li>
-    					<li><a href="">Ptr1 + Ptr2</a></li>
-    					<li><a href="">Ptr2</a></li>
-    					<li><a href="">Ptr23</a></li>
-    				</ul>
+ 	   			<jdoc:include type="modules" name="footer-column-2" />
     			</div>
     			<div class="right">
+ 	   			<jdoc:include type="modules" name="footer-column-3" />
     				<h3>Menu 3</h3>
-    				<ul>
-    					<li><a href="">Ptr1</a></li>
-    					<li><a href="">Ptr1 + Ptr2</a></li>
-    					<li><a href="">Ptr1 + Ptr2</a></li>
-    					<li><a href="">Ptr2</a></li>
-    					<li><a href="">Ptr2</a></li>
-    					<li><a href="">Ptr23</a></li>
-    				</ul>
     			</div>
     			<div class="rightest">
-    				<h3>Menu 4</h3>
-    				<ul>
-    					<li><a href="">Ptr1</a></li>
-    					<li><a href="">Ptr2</a></li>
-    					<li><a href="">Ptr23</a></li>
-    				</ul>
+ 	   			<jdoc:include type="modules" name="footer-column-4" />
     			</div>
     		</div>
 

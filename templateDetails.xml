@@ -25,12 +25,20 @@
 	</files>
 	<positions>
 		<position>main-menu</position>
+
 		<position>debug</position>
+
 		<position>search</position>
 		<position>sidebar</position>
+
 		<position>position-3</position>
 		<position>pre-footer</position>
+
 		<position>footer</position>
+		<position>footer-column-1</position>
+		<position>footer-column-2</position>
+		<position>footer-column-3</position>
+		<position>footer-column-4</position>
 
 
 		<position>front-red-left</position>
@@ -40,8 +48,10 @@
 		<position>front-blue</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_metropol.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_metropol.sys.ini</language>
+		<language tag="en-GB">en-GB.tpl_metropol.ini</language>
+		<language tag="en-GB">en-GB.tpl_metropol.sys.ini</language>
+		<language tag="de-DE">de-DE.tpl_metropol.ini</language>
+		<language tag="de-DE">de-DE.tpl_metropol.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">

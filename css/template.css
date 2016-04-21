@@ -804,6 +804,8 @@ body.site {
 	text-align: center;
 	width: 100%;
 	max-width: initial;
+	max-height: 500px;
+	box-sizing: border-box;
 }
 
 .view-featured .head h2 {
