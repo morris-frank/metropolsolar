@@ -748,7 +748,6 @@ body.site {
 	padding: 94px 30px 80px;
 	overflow-y: auto;
 	max-height: 600px;
-	max-height: 70vh;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
 }
@@ -769,9 +768,8 @@ body.site {
 
 .view-featured .cols section {
 	padding: 50px 5px 40px;
-	min-width: 263px;
 	display: table-cell;
-	width: 50%;
+	width: 800px;
 	vertical-align: top;
 }
 
@@ -832,11 +830,14 @@ body.site {
 	top: 50px;
 	left: 0;
 	width: 100%;
-	font-size: 70px;
+	font-size: 52px;
 }
 
 .view-featured .head .item {
 	max-width: 60%;
+	font-size: 22px;
+	box-shadow: none;
+	background-color: transparent;
 }
 
 .view-featured .blog {
@@ -861,7 +862,7 @@ body.site {
 
 .view-featured .logo-map-sec {
 	background: white;
-	height: 300px;
+	height: 400px;
 	overflow: hidden;
 	box-shadow: none;
 }
@@ -953,6 +954,7 @@ body.site {
 	position: absolute;
 	width: 220px;
 	text-align: center;
+	min-height: 120px;
 }
 
 .logo-map > div > * {
@@ -977,20 +979,20 @@ body.site {
 	opacity: 0;
 }
 
-.logo-map > div  p {
+.logo-map > div  span {
 	transform: rotateY(-180deg);
 	opacity: 0;
 	font-size: 13px;
 	line-height: 1.2em;
 	text-shadow: none;
-	padding: 9px 4px;
+	padding: 14px;
 	height: 0;
 	overflow: hidden;
 	color: transparent;
 	background-color: transparent;
 }
 
-.logo-map > div:hover p {
+.logo-map > div:hover span{
 	opacity: 1;
 	transform: rotateY(0deg);
 	height: initial;
@@ -1009,7 +1011,7 @@ body.site {
 }
 
 .logo-map > div.ne > img,
-.logo-map > div.ne p{
+.logo-map > div.ne span{
 	left: 0;
 }
 
@@ -1024,7 +1026,7 @@ body.site {
 }
 
 .logo-map > div.se > img,
-.logo-map > div.se p{
+.logo-map > div.se span{
 	left: 0;
 }
 

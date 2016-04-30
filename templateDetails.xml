@@ -70,7 +70,7 @@
 					description="TPL_METROPOL_SITEDESCHEAD_DESC"
 					filter="string" />
 
-				<field name="sitedescbody"  type="text" default="Das 2006 gegründete Netzwerk MetropolSolar Rhein-Neckar fördert die vollständige Ablösung der atomarfossilen Energieversorgung durch Energieeffizienz, Energieeinsparung und den Ausbau der Nutzung aller erneuerbaren Energie"
+				<field name="sitedescbody"  type="textarea" default="Das 2006 gegründete Netzwerk MetropolSolar Rhein-Neckar fördert die vollständige Ablösung der atomarfossilen Energieversorgung durch Energieeffizienz, Energieeinsparung und den Ausbau der Nutzung aller erneuerbaren Energie"
 					label="TPL_METROPOL_SITEDESCBODY_LABEL"
 					description="TPL_METROPOL_SITEDESCBODY_DESC"
 					filter="string" />
@@ -80,40 +80,40 @@
 					description="TPL_METROPOL_LOGOMAPHEADNW_DESC"
 					directory="/"  />
 
-				<field name="logomapbodynw"  type="text" default=""
+				<field name="logomapbodynw"  type="textarea" rows="10" cols="25" default=""
 					label="TPL_METROPOL_LOGOMAPBODYNW_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYNW_DESC"
-					filter="string" />
+					filter="raw" />
 
 				<field name="logomapheadne"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADNE_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADNE_DESC"
 					directory="/"  />
 
-				<field name="logomapbodyne"  type="text" default=""
+				<field name="logomapbodyne"  type="textarea" rows="10" cols="25" default=""
 					label="TPL_METROPOL_LOGOMAPBODYNE_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYNE_DESC"
-					filter="string" />
+					filter="raw" />
 
 				<field name="logomapheadsw"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADSW_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADSW_DESC"
 					directory="/"  />
 
-				<field name="logomapbodysw"  type="text" default=""
+				<field name="logomapbodysw"  type="textarea" rows="10" cols="25" default=""
 					label="TPL_METROPOL_LOGOMAPBODYSW_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYSW_DESC"
-					filter="string" />
+					filter="raw" />
 
 				<field name="logomapheadse"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADSE_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADSE_DESC"
 					directory="/"  />
 
-				<field name="logomapbodyse"  type="text" default=""
+				<field name="logomapbodyse"  type="textarea" rows="10" cols="25" default=""
 					label="TPL_METROPOL_LOGOMAPBODYSE_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYSE_DESC"
-					filter="string" />
+					filter="raw" />
 			</fieldset>
 		</fields>
 	</config>

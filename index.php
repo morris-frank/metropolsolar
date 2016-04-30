@@ -50,6 +50,11 @@ else
 // Add JavaScript Frameworks
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template.js');
 
+if($view == 'featured')
+{
+	$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/twitters.js');
+}
+
 // Add Stylesheets
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/template.css');
 
@@ -105,24 +110,6 @@ else
 		}
 	</style>
 	<?php endif; ?>
-
-	<script>
-		window.twttr = (function(d, s, id) {
-  			var js, fjs = d.getElementsByTagName(s)[0],
-    			t = window.twttr || {};
-  			if (d.getElementById(id)) return t;
-  				js = d.createElement(s);
-  				js.id = id;
-  				js.src = "https://platform.twitter.com/widgets.js";
-  				fjs.parentNode.insertBefore(js, fjs);
-
- 				t._e = [];
-  				t.ready = function(f) {
-    				t._e.push(f);
-  			};
-  			return t;
-		}(document, "script", "twitter-wjs"));
-	</script>
 
 </head>
 

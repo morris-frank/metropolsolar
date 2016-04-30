@@ -32,22 +32,22 @@ $params = $app->getTemplate(true)->params;
 
 				<div class="nw">
 					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadnw'); ?>" />
-					<p><?php echo $params->get('logomapbodynw'); ?></p>
+					<span><?php echo $params->get('logomapbodynw'); ?></span>
 				</div>
 
 				<div class="ne">
 					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadne'); ?>" />
-					<p><?php echo $params->get('logomapbodyne'); ?></p>
+					<span><?php echo $params->get('logomapbodyne'); ?></span>
 				</div>
 
 				<div class="sw">
 					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadsw'); ?>" />
-					<p><?php echo $params->get('logomapbodysw'); ?></p>
+					<span><?php echo $params->get('logomapbodysw'); ?></span>
 				</div>
 
 				<div class="se">
 					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadse'); ?>" />
-					<p><?php echo $params->get('logomapbodyse'); ?></p>
+					<span><?php echo $params->get('logomapbodyse'); ?></span>
 				</div>
 			</div>
 		</section>
