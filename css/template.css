@@ -741,6 +741,7 @@ body.site {
 .view-featured .cols {
 	max-width: 1060px;
 	display: table;
+	table-layout: fixed;
 }
 
 .view-featured section {
