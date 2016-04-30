@@ -18,8 +18,8 @@ function fnWrapper(e) {
       header.className = "";
     }
     if(secHead != null) {
-      var posY = -200 - (window.pageYOffset/3)
-      secHead.style.backgroundPositionY = posY.toString() +"px";
+      var posY = -245 - (window.pageYOffset/3)
+      secHead.style.backgroundPosition = "50%" + posY.toString() +"px";
     }
   }
 

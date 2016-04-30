@@ -810,14 +810,9 @@ body.site {
 	background: #A4D273;
 	background-size: cover;
 	background-position: center;
-	background-position-X: 50%;
-	background-position-Y: -200px;
+	background-position: 50% -245px;
 	z-index: 5;
-	padding: 160px 0 40px;
-	font-weight: bold;
-	font-size: 18px;
-	font-style: 1rem;
-	letter-spacing: 1px;
+	padding: 160px 0 60px;
 	word-spacing: 2px;
 	text-align: center;
 	width: 100%;
@@ -861,7 +856,6 @@ body.site {
 }
 
 .view-featured .logo-map-sec {
-	background: white;
 	height: 400px;
 	overflow: hidden;
 	box-shadow: none;
@@ -972,6 +966,7 @@ body.site {
 	max-height: 100px;
 	max-width: 80%;
 	box-shadow: 0 0 73px -3px #f5e611;
+	background-color: white;
 }
 
 .logo-map > div:hover > img {
@@ -988,15 +983,14 @@ body.site {
 	padding: 14px;
 	height: 0;
 	overflow: hidden;
-	color: transparent;
-	background-color: transparent;
+	color: #333;
+	background-color: white;
 }
 
 .logo-map > div:hover span{
 	opacity: 1;
 	transform: rotateY(0deg);
 	height: initial;
-	color: #333;
 	box-shadow: 0 0 73px -3px #f5e611;
 }
 

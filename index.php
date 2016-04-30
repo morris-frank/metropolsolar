@@ -52,7 +52,7 @@ $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template
 
 if($view == 'featured')
 {
-	$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/twitters.js');
+	$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/twitter.js');
 }
 
 // Add Stylesheets
