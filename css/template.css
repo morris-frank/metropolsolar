@@ -770,6 +770,10 @@ body.site {
 .view-featured .cols section {
 	padding: 50px 5px 40px;
 	display: table-cell;
+	max-width: 50%;
+	width: 50%;
+	min-width: 50%;
+	min-width: 250px;
 	width: 800px;
 	vertical-align: top;
 }
