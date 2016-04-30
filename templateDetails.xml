@@ -75,40 +75,40 @@
 					description="TPL_METROPOL_SITEDESCBODY_DESC"
 					filter="string" />
 
-				<field name="logomapheadnw"  type="text" default=""
+				<field name="logomapheadnw"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADNW_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADNW_DESC"
-					filter="string" />
+					directory="/"  />
 
 				<field name="logomapbodynw"  type="text" default=""
 					label="TPL_METROPOL_LOGOMAPBODYNW_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYNW_DESC"
 					filter="string" />
 
-				<field name="logomapheadne"  type="text" default=""
+				<field name="logomapheadne"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADNE_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADNE_DESC"
-					filter="string" />
+					directory="/"  />
 
 				<field name="logomapbodyne"  type="text" default=""
 					label="TPL_METROPOL_LOGOMAPBODYNE_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYNE_DESC"
 					filter="string" />
 
-				<field name="logomapheadsw"  type="text" default=""
+				<field name="logomapheadsw"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADSW_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADSW_DESC"
-					filter="string" />
+					directory="/"  />
 
 				<field name="logomapbodysw"  type="text" default=""
 					label="TPL_METROPOL_LOGOMAPBODYSW_LABEL"
 					description="TPL_METROPOL_LOGOMAPBODYSW_DESC"
 					filter="string" />
 
-				<field name="logomapheadse"  type="text" default=""
+				<field name="logomapheadse"  type="media" default=""
 					label="TPL_METROPOL_LOGOMAPHEADSE_LABEL"
 					description="TPL_METROPOL_LOGOMAPHEADSE_DESC"
-					filter="string" />
+					directory="/"  />
 
 				<field name="logomapbodyse"  type="text" default=""
 					label="TPL_METROPOL_LOGOMAPBODYSE_LABEL"

@@ -183,7 +183,7 @@ else
 			<?php echo $doc->getBuffer('modules', 'footer', array('style' => 'none')); ?>
 			<p class="pull-right">
 				<a href="#top" id="back-top">
-					<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
+					Back to the top
 				</a>
 			</p>
 			<p>

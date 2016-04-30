@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 $app  = JFactory::getApplication();
 $doc  = JFactory::getDocument();
 $path = JURI::base(true).'/templates/'.$app->getTemplate().'/';
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 $renderer = $doc->loadRenderer('modules');
 $render_options = array('style' => 'none');
@@ -29,30 +30,23 @@ $params = $app->getTemplate(true)->params;
 			<div class="logo-map">
 				<img class="shadow" src="<?php echo $path; ?>/media/metro-logo.svg" />
 
-				<!--
-				<a href=""><button class="nw backcolor-shine">MPS Energie Institut</button></a>
-				<a href=""><button class="ne backcolor-shine">Verein</button></a>
-				<a href=""><button class="sw backcolor-shine">Bildung</button></a>
-				<a href=""><button class="se backcolor-shine">Mitglied werden</button></a>
-				-->
-
 				<div class="nw">
-					<h3><?php echo $params->get('logomapheadnw'); ?></h3>
+					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadnw'); ?>" />
 					<p><?php echo $params->get('logomapbodynw'); ?></p>
 				</div>
 
 				<div class="ne">
-					<h3><?php echo $params->get('logomapheadne'); ?></h3>
+					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadne'); ?>" />
 					<p><?php echo $params->get('logomapbodyne'); ?></p>
 				</div>
 
 				<div class="sw">
-					<h3><?php echo $params->get('logomapheadsw'); ?></h3>
+					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadsw'); ?>" />
 					<p><?php echo $params->get('logomapbodysw'); ?></p>
 				</div>
 
 				<div class="se">
-					<h3><?php echo $params->get('logomapheadse'); ?></h3>
+					<img src="<?php echo JURI::base(true).'/'.$params->get('logomapheadse'); ?>" />
 					<p><?php echo $params->get('logomapbodyse'); ?></p>
 				</div>
 			</div>

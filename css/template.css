@@ -87,7 +87,9 @@ ol {
 	margin: 0 0 9px 25px;
 }
 
-button {
+button,
+input[type="submit"],
+input[type="button"] {
 	/*background-color: #F5E611;*/
 	background-color: #BCEB10;
 	padding: 4px 10px;
@@ -102,16 +104,22 @@ button {
 	line-height: 1em;
 }
 
-button:hover {
+button:hover,
+input[type="submit"],
+input[type="button"] {
 	text-shadow:  -2px 2px 0 rgba(0,0,0,0.2);
 	box-shadow:  -1px 1px 2px rgba(0,0,0,0.1);
 }
 
-button a {
+button a,
+input[type="submit"],
+input[type="button"] {
 	text-decoration: none;
 }
 
-button a:hover {
+button a:hover,
+input[type="submit"],
+input[type="button"] {
 	color: inherit;
 }
 
@@ -737,20 +745,34 @@ body.site {
 
 .view-featured section {
 	max-width: 1000px;
-	padding: 80px 30px;
+	padding: 94px 30px 80px;
 	overflow-y: auto;
 	max-height: 600px;
 	max-height: 70vh;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 	text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.view-featured section,
+.view-featured section div.entry {
 	color: white;
 }
 
+.view-featured article,
+.view-featured div.category-list,
+.view-featured div.blog
+{
+	background-color: transparent;
+	box-shadow: none;
+	padding: 0;
+}
+
 .view-featured .cols section {
-	padding: 40px 5px;
+	padding: 50px 5px 40px;
 	min-width: 263px;
 	display: table-cell;
 	width: 50%;
+	vertical-align: top;
 }
 
 .view-featured section > h2,
@@ -773,7 +795,7 @@ body.site {
 .view-featured section .item-leading,
 /*.view-featured section > p, */
 .view-featured section div.custom {
-	margin:  20px auto;
+	margin:  0 auto 20px;
 	max-width: 79%;
 	padding: 10px 30px;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -844,6 +866,18 @@ body.site {
 	box-shadow: none;
 }
 
+.view-featured .sponsors img {
+	max-width: 30%;
+	padding: 6px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+.view-featured .sponsors h3 {
+	margin: 20px 0 5px;
+	font-size: 18px;
+}
+
 @media(max-width: 750px) {
 	.view-featured main {
 		padding-top: 0;
@@ -895,11 +929,6 @@ body.site {
 		max-width: 300px;
 	}
 
-	.view-featured .logo-map img {
-		width: 100%;
-		margin-bottom: 30px;
-	}
-
 	.view-featured .logo-map button {
 		position: static;
 	}
@@ -930,17 +959,20 @@ body.site {
 	transition: 0.5s;
 	border-radius: 5px;
 	position: absolute;
-}
-
-.logo-map > div > h3 {
-	font-size: 29px;
-	line-height: 30px;
 	top: 0;
-	background-color: #f5e611;
-	text-shadow: none;
+	right: 0;
 }
 
-.logo-map > div:hover > h3 {
+.logo-map > div > img {
+	text-shadow: none;
+	padding: 10px 15px;
+	display: block;
+	max-height: 100px;
+	max-width: 80%;
+	box-shadow: 0 0 73px -3px #f5e611;
+}
+
+.logo-map > div:hover > img {
 	transform: rotateY(-180deg);
 	opacity: 0;
 }
@@ -948,12 +980,11 @@ body.site {
 .logo-map > div  p {
 	transform: rotateY(-180deg);
 	opacity: 0;
-	font-size: 14px;
-	line-height: 1.1em;
+	font-size: 13px;
+	line-height: 1.2em;
 	text-shadow: none;
-	padding: 0 5px 13px;
-	top: -2em;
-	height: 0px;
+	padding: 9px 4px;
+	height: 0;
 	overflow: hidden;
 	color: transparent;
 	background-color: transparent;
@@ -963,28 +994,38 @@ body.site {
 	opacity: 1;
 	transform: rotateY(0deg);
 	height: initial;
-	color: white;
-	background-color: #f5e611;
+	color: #333;
+	box-shadow: 0 0 73px -3px #f5e611;
 }
 
 .logo-map .nw {
 	top: 3px;
-	right: 292px;
+	right: 333px;
 }
 
 .logo-map .ne {
 	top: 4px;
-	left: 300px;
+	left: 340px;
+}
+
+.logo-map > div.ne > img,
+.logo-map > div.ne p{
+	left: 0;
 }
 
 .logo-map .sw {
 	top: 232px;
-	right: 294px;
+	right: 328px;
 }
 
 .logo-map .se {
 	top: 235px;
-	left: 278px;
+	left: 308px;
+}
+
+.logo-map > div.se > img,
+.logo-map > div.se p{
+	left: 0;
 }
 
 /*****************/
@@ -1002,6 +1043,61 @@ body.site {
 	background:  #f5e611;
 	background: #BCEB10;
 	color: #fff;
+}
+
+fieldset {
+	border: none;
+}
+
+textarea,
+label,
+input {
+	font-size: 13px;
+	font-size: 0.8rem;
+	line-height: 13px;
+	line-height: 0.8rem;
+}
+
+label {
+    display: inline-block;
+    margin: 0;
+    width: 80px;
+    padding: 4px 4px;
+    float: left;
+    margin-right: 10px;
+    text-shadow: none;
+    text-align: right;
+}
+
+.form-item .description {
+    font-size: 16px;
+    font-size: 1rem
+}
+
+fieldset legend {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+    line-height: 1.3em;
+    letter-spacing: .03em;
+    margin: 0 0 30px
+}
+
+textarea,
+input {
+	background-color: rgba(255,255,255,0.9);
+	border: none;
+	padding: 4px 4px;
+	color: #777;
+	margin-bottom: 6px;
+}
+
+textarea:focus,
+input:focus {
+	background-color: white;
+	border: none;
+	color: #555;
 }
 
 input[disabled],
@@ -1589,29 +1685,6 @@ table th[class*="span"],
 
 
 /*** FORM TEST ***/
-
-
-label {
-    font-size: 13px;
-    display: block;
-    margin: 0 0 8px
-}
-.form-item .description {
-    font-size: 16px;
-    font-size: 1rem
-}
-
-fieldset legend {
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
-    color: #666;
-    line-height: 1.3em;
-    letter-spacing: .03em;
-    margin: 0 0 30px
-}
-
-
 table {
     width: 99%;
     border: 1px solid #ccc;
