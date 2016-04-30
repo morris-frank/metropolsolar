@@ -60,11 +60,11 @@ $params = $app->getTemplate(true)->params;
 
 		<div class="cols">
 		<section class="col-1 left">
-			<?php echo $renderer->render('front-red-left', null, null); ?>
+			<?php echo $renderer->render('front-red-left', $render_options, null); ?>
 		</section>
 
 		<section class="col-1 right">
-			<?php echo $renderer->render('front-red-right', null, null); ?>
+			<?php echo $renderer->render('front-red-right', $render_options, null); ?>
 		</section>
 		</div>
 
@@ -126,14 +126,14 @@ $params = $app->getTemplate(true)->params;
 
 		<div class="cols">
 		<section class="col-2 left">
-			<?php echo $renderer->render('front-yellow-left', null, null); ?>
+			<?php echo $renderer->render('front-yellow-left', $render_options, null); ?>
 		</section>
 
 		<section class="col-2 right">
-			<?php echo $renderer->render('front-yellow-right', null, null); ?>
+			<?php echo $renderer->render('front-yellow-right', $render_options, null); ?>
 		</section>
 		</div>
 
 		<section class="last">
-			<?php echo $renderer->render('front-blue', null, null); ?>
+			<?php echo $renderer->render('front-blue', $render_options, null); ?>
 		</section>

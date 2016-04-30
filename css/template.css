@@ -592,6 +592,7 @@ footer .four-columns {
 	margin-top: 70px;
 	font-size: 15px;
 	line-height: 1.2;
+	box-sizing: border-box;
 }
 
 footer .four-columns > div h3 {
@@ -726,6 +727,7 @@ body.site {
 	min-height: 40vh;
 	position: relative;
 	background: linear-gradient(to left, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.1));
+	font-size: 13px;
 }
 
 .view-featured .cols {
@@ -757,30 +759,25 @@ body.site {
 	top: -27px;
 	right: 10px;
 	font-size: 100px;
+	white-space: nowrap;
 }
 
 .view-featured .cols section > h2,
 .view-featured .cols section div.custom > h2 {
-	top: -13px;
-	font-size: 50px;
+	top: 9px;
+	font-size: 39px;
+	line-height: 35px;
 }
 
 .view-featured section .item,
 .view-featured section .item-leading,
-.view-featured section > p,
-.view-featured section div.custom > p {
+/*.view-featured section > p, */
+.view-featured section div.custom {
 	margin:  20px auto;
-	max-width: 66%;
+	max-width: 79%;
 	padding: 10px 30px;
 	background-color: rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
-}
-
-.view-featured .cols section .item,
-.view-featured .cols section .item-leading,
-.view-featured .cols section > p,
-.view-featured .cols section div.custom > p {
-	max-width: 75%;
 }
 
 .view-featured section iframe {
@@ -796,9 +793,10 @@ body.site {
 	background-position-X: 50%;
 	background-position-Y: -200px;
 	z-index: 5;
-	padding-top: 160px;
-	padding-bottom: 10px;
+	padding: 160px 0 40px;
 	font-weight: bold;
+	font-size: 18px;
+	font-style: 1rem;
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	text-align: center;
@@ -813,6 +811,10 @@ body.site {
 	left: 0;
 	width: 100%;
 	font-size: 70px;
+}
+
+.view-featured .head .item {
+	max-width: 60%;
 }
 
 .view-featured .blog {
@@ -920,33 +922,49 @@ body.site {
 
 .logo-map > div {
 	position: absolute;
-	width: 160px;
+	width: 220px;
 	text-align: center;
 }
 
 .logo-map > div > * {
-	background-color: #f5e611;
+	transition: 0.5s;
+	border-radius: 5px;
+	position: absolute;
 }
 
 .logo-map > div > h3 {
-	border-top-right-radius: 5px;
-	border-top-left-radius:  5px;
+	font-size: 29px;
+	line-height: 30px;
+	top: 0;
+	background-color: #f5e611;
+	text-shadow: none;
+}
+
+.logo-map > div:hover > h3 {
+	transform: rotateY(-180deg);
+	opacity: 0;
 }
 
 .logo-map > div  p {
-	transition: 0.3s;
+	transform: rotateY(-180deg);
 	opacity: 0;
 	font-size: 14px;
 	line-height: 1.1em;
 	text-shadow: none;
-	color: #333;
-	padding: 4px 5px 10px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	padding: 0 5px 13px;
+	top: -2em;
+	height: 0px;
+	overflow: hidden;
+	color: transparent;
+	background-color: transparent;
 }
 
 .logo-map > div:hover p {
 	opacity: 1;
+	transform: rotateY(0deg);
+	height: initial;
+	color: white;
+	background-color: #f5e611;
 }
 
 .logo-map .nw {

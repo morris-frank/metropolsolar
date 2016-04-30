@@ -140,7 +140,7 @@ else
       			<span>MetropolSolar</span><span>Rhein-Neckar</span>
     		</h1></a>
     		<div class="mod-main-menu">
-    			<jdoc:include type="modules" name="main-menu" title="Main Menu" />
+    			<jdoc:include type="modules" name="main-menu" title="Main Menu" style="none"/>
     		</div>
   	</header>
 
@@ -186,16 +186,16 @@ else
 
     		<div class="four-columns">
     			<div class="leftest">
- 	   			<jdoc:include type="modules" name="footer-column-1" />
+ 	   			<jdoc:include type="modules" name="footer-column-1" style="html5" />
     			</div>
     			<div class="left">
- 	   			<jdoc:include type="modules" name="footer-column-2" />
+ 	   			<jdoc:include type="modules" name="footer-column-2" style="html5" />
     			</div>
     			<div class="right">
- 	   			<jdoc:include type="modules" name="footer-column-3" />
+ 	   			<jdoc:include type="modules" name="footer-column-3" style="html5" />
     			</div>
     			<div class="rightest">
- 	   			<jdoc:include type="modules" name="footer-column-4" />
+ 	   			<jdoc:include type="modules" name="footer-column-4" style="html5" />
     			</div>
     		</div>
 
