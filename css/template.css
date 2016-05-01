@@ -982,14 +982,13 @@ body.site {
 .logo-map > div  span {
 	transform: rotateY(-180deg);
 	opacity: 0;
-	font-size: 13px;
-	line-height: 1.2em;
+	font-size: 16px;
+	line-height: 1.3em;
 	text-shadow: none;
 	padding: 14px;
-	height: 0;
 	overflow: hidden;
-	color: #333;
-	background-color: white;
+	color: transparent;
+	background: transparent;
 }
 
 .logo-map > div:hover span{
@@ -997,6 +996,8 @@ body.site {
 	transform: rotateY(0deg);
 	height: initial;
 	box-shadow: 0 0 73px -3px #f5e611;
+	background-color: white;
+	color: #333;
 }
 
 .logo-map .nw {
